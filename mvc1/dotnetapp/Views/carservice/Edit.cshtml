@@ -1,0 +1,60 @@
+@model dotnetapp.Models.Carservice
+
+<h2>Edit Carservice</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.car_name)
+        @Html.TextBoxFor(model => model.car_name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.car_name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.car_number)
+        @Html.TextBoxFor(model => model.car_number, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.car_number, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.car_varient)
+        @Html.TextBoxFor(model => model.car_varient, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.car_varient, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.customer_name)
+        @Html.TextBoxFor(model => model.customer_name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.customer_name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.complaint)
+        @Html.TextBoxFor(model => model.complaint, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.complaint, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.phonenumber)
+        @Html.TextBoxFor(model => model.phonenumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.phonenumber, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.address)
+        @Html.TextBoxFor(model => model.address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
