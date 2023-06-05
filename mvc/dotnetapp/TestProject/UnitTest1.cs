@@ -19,7 +19,7 @@ namespace EmployeeControllerTests
         }
 
         [Test]
-        public void Index_ReturnsViewResultWithEmployees()
+        public void test_case1()
         {
             // Act
             var result = _controller.Index() as ViewResult;
@@ -31,7 +31,7 @@ namespace EmployeeControllerTests
         }
 
         [Test]
-        public void Create_ReturnsViewResult()
+        public void test_case2()
         {
             // Act
             var result = _controller.Create() as ViewResult;
@@ -42,7 +42,7 @@ namespace EmployeeControllerTests
         }
 
         [Test]
-        public void Edit_NonExistingId_ReturnsNotFoundResult()
+        public void test_case3()
         {
             // Arrange
             int nonExistingId = 100; // Assuming there is no employee with ID 100
@@ -56,7 +56,7 @@ namespace EmployeeControllerTests
         }
 
         [Test]
-        public void Delete_NonExistingId_ReturnsNotFoundResult()
+        public void test_case4()
         {
             // Arrange
             int nonExistingId = 100; // Assuming there is no employee with ID 100
@@ -70,7 +70,7 @@ namespace EmployeeControllerTests
         }
 
         [Test]
-        public void Delete_InvalidId_ReturnsBadRequestResult()
+        public void test_case5()
         {
             // Arrange
             int invalidId = -1; // Assuming -1 is an invalid ID
