@@ -5,14 +5,30 @@
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>car_name</th>
-            <th>car_number</th>
-            <th>car_varient<th>
-            <th>customer_name</th>
-            <th>complaint</th>
-            <th>phonenumber</th>
-            <th>address</th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="id">ID</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="car_name">Car Name</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="car_number">Car Number</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="car_varient">Car Variant</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="customer_name">Customer Name</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="complaint">Complaint</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="phonenumber">Phone Number</a>
+            </th>
+            <th>
+                <a asp-action="Index" asp-route-sortOrder="address">Address</a>
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -24,19 +40,16 @@
                 <td>@carservice.car_name</td>
                 <td>@carservice.car_number</td>
                 <td>@carservice.car_varient</td>
-                <td>@carservice.customer_name</td>   
+                <td>@carservice.customer_name</td>
                 <td>@carservice.complaint</td>
                 <td>@carservice.phonenumber</td>
                 <td>@carservice.address</td>
-                 <td>
-                    <!-- <a asp-action="Details" asp-route-id="@carservice.id">Details</a> | -->
-                    <a asp-action="Edit" asp-route-id="@carservice.id">Edit</a> |
+                <td>
                     <a asp-action="Delete" asp-route-id="@carservice.id">Delete</a>
                 </td>
-
             </tr>
         }
     </tbody>
 </table>
 
-<a href="@Url.Action("Create")" class="btn btn-primary">Create New car</a>
+<a href="@Url.Action("Create")" class="btn btn-primary">Create New Car</a>
